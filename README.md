@@ -4,11 +4,18 @@
 
 ## Install
 
-Add the following frontmatter to `slides.md`:
+Add the theme to your `package.json` (be careful to match the package name to comply with slidev conventions):
+```
+  "dependencies": {
+    "slidev-theme-oxrse": "github:OxfordRSE/oxrse-theme-slidev",
+  }
+```
+
+Then, simply add the following frontmatter to your `slides.md`:
 
 ```yaml
 ---
-theme: ./theme-oxrse
+theme: oxrse
 ---
 ```
 
