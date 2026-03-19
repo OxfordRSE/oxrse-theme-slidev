@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/OxfordRSE/training-course-slides"
   },
-  "bugs":  "https://github.com/OxfordRSE/training-course-slides/issues",
+  "bugs": "https://github.com/OxfordRSE/training-course-slides/issues",
   "keywords": [
     "slidev-theme",
     "slidev"
@@ -23,5 +23,9 @@
       "routerMode": "hash",
       "favicon": "/favicon.svg"
     }
+  },
+  "dependencies": {
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.5"
   }
 }
