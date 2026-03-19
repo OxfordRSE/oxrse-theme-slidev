@@ -1,5 +1,5 @@
 <script setup>
-import logo from '../img/logos/2024_oxrse_next_to_oxford.svg'
+import logo from './img/logos/2024_oxrse_next_to_oxford.svg'
 </script>
 
 <template>
