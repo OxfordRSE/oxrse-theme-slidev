@@ -1,0 +1,27 @@
+{
+  "name": "slidev-theme-oxrse",
+  "version": "0.0.1",
+  "description": "OxRSE Slidev theme for training",
+  "author": "OxRSE <rse-training@dtc.ox.ac.uk>",
+  "license": "MIT",
+  "homepage": "https://www.rse.ox.ac.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OxfordRSE/training-course-slides"
+  },
+  "bugs":  "https://github.com/OxfordRSE/training-course-slides/issues",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=0.48.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "routerMode": "hash",
+      "favicon": "/favicon.svg"
+    }
+  }
+}

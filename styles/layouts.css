@@ -1,0 +1,29 @@
+:root {
+  --oxrse-bg-colour: #002147;
+  --oxrse-header-height: 90px;
+  --oxrse-logo-height: 60px;
+}
+
+/* slide title is shown in the header bar, so hide h1 in content */
+.slidev-layout:not(.cover) h1:first-of-type {
+  display: none;
+}
+
+/* offset content below the header bar */
+.slidev-layout:not(.cover) {
+  padding-top: calc(var(--oxrse-header-height) + 1.5rem);
+}
+
+/* typography */
+.slidev-layout {
+  h1 { color: var(--oxrse-bg-colour); @apply text-4xl mb-4; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+
+  h1 + p { @apply -mt-2 opacity-50 mb-4; }
+}
+
+.slidev-layout.section {
+  h1 { @apply text-6xl font-500 leading-20; }
+}
