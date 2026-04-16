@@ -35,9 +35,18 @@ schedule specified by `TRAINING_EVENT` during build or as frontmatter fields.
 layout: cover
 year: 2026
 sessions:
+  - date: "1 Jan"
+    slot: morning
+    topic: Training event 1
+  - date: "1 Jan"
+    slot: afternoon
+    topic: Training event 2
   - date: "31 Dec"
     slot: morning
     topic: Training event 3
+  - date: "31 Dec"
+    slot: afternoon
+    topic: Training event 4
 ---
 ```
 
@@ -61,9 +70,18 @@ session when `highlight` matches a topic name.
 layout: orientation
 highlight: Training Event 3
 sessions:
+  - date: "1 Jan"
+    slot: morning
+    topic: Training event 1
+  - date: "1 Jan"
+    slot: afternoon
+    topic: Training event 2
   - date: "31 Dec"
     slot: morning
     topic: Training event 3
+  - date: "31 Dec"
+    slot: afternoon
+    topic: Training event 4
 ---
 ```
 
@@ -99,17 +117,14 @@ Oxford and OxRSE at the top right. This is handled by `global-top.vue`.
 ## Event schedule integration
 
 Set the `TRAINING_EVENT` environment variable to load a schedule from
-`common/events/<NAME>.yaml`:
+`events/<NAME>.yaml`:
 
 ```shell
-TRAINING_EVENT='current-training-event' npx slidev slides.md # look for common/events/current-training-event.yaml
+TRAINING_EVENT='current-training-event' npx slidev slides.md # look for events/current-training-event.yaml
 ```
 
 - The **cover** layout populates its date from the matching session.
 - The **orientation** layout populates the full session table.
-
-When `TRAINING_EVENT` is not set, the orientation layout shows an empty table.
-You can disable it with `disabled: true` in the frontmatter.
 
 ## Development
 
