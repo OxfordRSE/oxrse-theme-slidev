@@ -8,9 +8,9 @@ export default defineVitePluginsSetup((options) => {
   let schedule = { sessions: [] as Record<string, string>[] }
 
   if (!training_event) {
-    console.info('[slidev-oxrse] TRAINING_EVENT not set — hide the slide with "orientation" layout by "disabled: true" in its frontmatter.')
+    console.info('[slidev-oxrse] TRAINING_EVENT not set: hide the slide with "orientation" layout by "disabled: true" in its frontmatter.')
   } else {
-    const event_yaml = path.resolve(options.userWorkspaceRoot, `common/events/${training_event}.yaml`)
+    const event_yaml = path.resolve(options.userWorkspaceRoot, `events/${training_event}.yaml`)
     if (!fs.existsSync(event_yaml)) {
       throw new Error(
         `[slidev-oxrse] TRAINING_EVENT="${training_event}" but file not found: ${event_yaml}`
