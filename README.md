@@ -52,11 +52,24 @@ sessions:
 
 **Frontmatter fields:**
 
-| Field   | Type   | Default            | Description                                  |
-|---------|--------|--------------------|----------------------------------------------|
-| `date` | String | auto from schedule | Override the displayed date                   |
-| `year` | Number | from schedule or current year | Year used when formatting date from session lookup |
-| `sessions` | Array | `null` (uses event schedule) | Inline session list for date lookup |
+| Field      | Type   | Default                       | Description                                          |
+|------------|--------|-------------------------------|------------------------------------------------------|
+| `date`     | String | auto from schedule            | Override the displayed date                          |
+| `year`     | Number | from schedule or current year | Year used when formatting date from session lookup   |
+| `sessions` | Array  | `null` (uses event schedule)  | Inline session list for date lookup                  |
+| `authors`  | Array  | `null`                        | List of author names joined with `, `.               |
+| `email`    | String | `'rse-training@dtc.ox.ac.uk'` | Contact email.                                       |
+
+Example with `authors` fields:
+
+```yaml
+---
+layout: cover
+authors:
+  - Albus Dumbledore
+  - Severus Snape
+---
+```
 
 ### `orientation`
 
