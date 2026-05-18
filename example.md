@@ -3,6 +3,9 @@ theme: ./
 title: Training event 3
 layout: cover
 year: 2026
+authors:
+  - Albus Dumbledore
+  - Severus Snape
 sessions:
   - date: "1 Jan"
     slot: morning

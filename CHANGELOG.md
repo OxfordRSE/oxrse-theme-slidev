@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.2
+
+- `cover` layout supports optional `authors`.
+- `cover` layout supports customised email via `email` frontmatter.
+
 ## 0.0.1
 
 Initial release of the OxRSE Slidev theme.
