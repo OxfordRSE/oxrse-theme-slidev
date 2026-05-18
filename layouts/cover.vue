@@ -6,6 +6,8 @@ const schedule = __EVENT_SCHEDULE__
 const props = defineProps({
   date: { type: String, default: '' },
   sessions: { type: Array, default: null },
+  authors: { type: Array, default: null },
+  email: { type: String, default: 'rse-training@dtc.ox.ac.uk' },
   frontmatter: { type: Object, default: () => ({}) },
 })
 
@@ -26,6 +28,8 @@ const cover_date = computed(() => {
     day: 'numeric', month: 'long', year: 'numeric',
   })
 })
+
+const authors_display = computed(() => (props.authors || []).join(', '))
 </script>
 
 <template>
@@ -36,7 +40,8 @@ const cover_date = computed(() => {
     <div class="oxrse-cover-content">
       <h1>{{ $slidev.configs.title }}</h1>
       <p class="oxrse-cover-group">Oxford Research Software Engineering Group</p>
-      <p class="oxrse-cover-email">rse-training@dtc.ox.ac.uk</p>
+      <p v-if="authors && authors.length" class="oxrse-cover-authors">{{ authors_display }}</p>
+      <p v-if="email" class="oxrse-cover-email">{{ email }}</p>
       <p class="oxrse-cover-date">{{ cover_date }}</p>
     </div>
     <slot />
@@ -76,6 +81,10 @@ const cover_date = computed(() => {
 .oxrse-cover-group {
   font-size: 1.25rem;
   opacity: 0.9;
+}
+.oxrse-cover-authors {
+  font-size: 1.1rem;
+  opacity: 0.85;
 }
 .oxrse-cover-email,
 .oxrse-cover-date {
